@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-cheat-sheet/static/css/main.39d1b91c.chunk.css",
+    "main.js": "/react-cheat-sheet/static/js/main.98ebe152.chunk.js",
+    "main.js.map": "/react-cheat-sheet/static/js/main.98ebe152.chunk.js.map",
+    "runtime-main.js": "/react-cheat-sheet/static/js/runtime-main.393484a1.js",
+    "runtime-main.js.map": "/react-cheat-sheet/static/js/runtime-main.393484a1.js.map",
+    "static/js/2.aa509761.chunk.js": "/react-cheat-sheet/static/js/2.aa509761.chunk.js",
+    "static/js/2.aa509761.chunk.js.map": "/react-cheat-sheet/static/js/2.aa509761.chunk.js.map",
+    "index.html": "/react-cheat-sheet/index.html",
+    "precache-manifest.51a7633a9fa537a015b67f9dd3f4a972.js": "/react-cheat-sheet/precache-manifest.51a7633a9fa537a015b67f9dd3f4a972.js",
+    "service-worker.js": "/react-cheat-sheet/service-worker.js",
+    "static/css/main.39d1b91c.chunk.css.map": "/react-cheat-sheet/static/css/main.39d1b91c.chunk.css.map",
+    "static/js/2.aa509761.chunk.js.LICENSE.txt": "/react-cheat-sheet/static/js/2.aa509761.chunk.js.LICENSE.txt",
+    "static/media/default-image.jpeg": "/react-cheat-sheet/static/media/default-image.ba61dcc5.jpeg",
+    "static/media/ss.png": "/react-cheat-sheet/static/media/ss.92da3065.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.393484a1.js",
+    "static/js/2.aa509761.chunk.js",
+    "static/css/main.39d1b91c.chunk.css",
+    "static/js/main.98ebe152.chunk.js"
+  ]
+}
