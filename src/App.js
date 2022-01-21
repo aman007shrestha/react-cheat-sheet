@@ -20,14 +20,19 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import Error from "./Error";
 function App() {
+  const home = "https://aman007shrestha.github.io/react-cheat-sheet/";
   return (
     <div className="container">
       <Router>
         <Link to="/">
           <h2>React</h2>
         </Link>
+
         <Switch>
           <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/react-cheat-sheet/">
             <Home />
           </Route>
 
