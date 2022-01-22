@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="container">
       <Router>
-        <Link to="/">
+        <Link to="/react-cheat-sheet/">
           <h2>React</h2>
         </Link>
 
