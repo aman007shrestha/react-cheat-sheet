@@ -63,7 +63,7 @@ const Index = () => {
       </form>
       {state.people.map(({ id, name }) => {
         return (
-          <div className='item' key={id} className='item'>
+          <div className='item' key={id}>
             <h3>{name}</h3>
             <button
               onClick={() => {

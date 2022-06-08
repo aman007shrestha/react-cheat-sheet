@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-const url = "https://api.github.com/users";
+const url = 'https://api.github.com/users';
 
 const UseEffectFetchData = () => {
   const [users, setUsers] = useState([]);
   const removeId = (id) => {
     setUsers((prev) => prev.filter((user) => user.id !== id));
     console.log(id);
-    console.log("hi");
+    console.log('hi');
   };
   const getUsers = async () => {
     const response = await fetch(url);
@@ -16,11 +16,11 @@ const UseEffectFetchData = () => {
     // console.log(users);
   };
   useEffect(() => {
-    console.log("useEffect run");
+    console.log('useEffect run');
     getUsers();
   }, []);
   return (
-    <div style={{ margin: "2.5rem 0" }}>
+    <div style={{ margin: '2.5rem 0' }}>
       <h3>3. Fetch Data</h3>
       <p>
         Note: users is a state of empty array. getUsers() which is a
@@ -29,23 +29,21 @@ const UseEffectFetchData = () => {
         using .map funtion.
       </p>
       <h3>github users</h3>
-      <ul className="users">
+      <ul className='users'>
         {users.map((user) => {
           const { id, login, avatar_url, html_url } = user;
-          {
-            /* console.log(login); */
-          }
+
           return (
             <div key={id}>
               <li>
-                <img src={avatar_url} width="200px" height="auto" alt={login} />
+                <img src={avatar_url} width='200px' height='auto' alt={login} />
                 <div>
                   <h4>{login}</h4>
                   <a href={html_url}>profile</a>
                 </div>
                 <button
-                  type="button"
-                  className="btn"
+                  type='button'
+                  className='btn'
                   onClick={() => removeId(id)}
                 >
                   remove
