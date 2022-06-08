@@ -1,34 +1,34 @@
-import React, { useState, useReducer } from "react";
-import Modal from "./Modal";
-import { data } from "../../../data";
+import React, { useState, useReducer } from 'react';
+import Modal from './Modal';
+// import { data } from "../../../data";
 // reducer function
-import reducer from "./reducer";
+import reducer from './reducer';
 
 const defaultState = {
   people: [],
   isModalOpen: false,
-  modalContent: "",
+  modalContent: '',
 };
 
 const Index = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [state, dispatch] = useReducer(reducer, defaultState);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
       const newItem = { id: new Date().getTime().toString(), name };
-      dispatch({ type: "ADD_ITEM", payload: newItem });
-      setName("");
+      dispatch({ type: 'ADD_ITEM', payload: newItem });
+      setName('');
     } else {
-      dispatch({ type: "NO_VALUE" });
+      dispatch({ type: 'NO_VALUE' });
     }
   };
   const closeModal = () => {
-    dispatch({ type: "CLOSE_MODAL" });
+    dispatch({ type: 'CLOSE_MODAL' });
   };
   // console.log(state.people);
   return (
-    <div style={{ margin: "2.5rem 0" }}>
+    <div style={{ margin: '2.5rem 0' }}>
       <p>
         useReducer is usually preferable to useState when you have complex state
         logic that involves multiple sub-values or when the next state depends
@@ -49,26 +49,26 @@ const Index = () => {
       {state.isModalOpen && (
         <Modal closeModal={closeModal} modalContent={state.modalContent} />
       )}
-      <form action="" className="form" onSubmit={handleSubmit}>
+      <form action='' className='form' onSubmit={handleSubmit}>
         <div>
           <input
-            type="text"
-            name="name"
-            id=""
+            type='text'
+            name='name'
+            id=''
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <button type="submit">Add</button>
+        <button type='submit'>Add</button>
       </form>
       {state.people.map(({ id, name }) => {
         return (
-          <div className="item" key={id} className="item">
+          <div className='item' key={id} className='item'>
             <h3>{name}</h3>
             <button
               onClick={() => {
                 console.log(id);
-                dispatch({ type: "REMOVE_ITEM", payload: id });
+                dispatch({ type: 'REMOVE_ITEM', payload: id });
               }}
             >
               remove

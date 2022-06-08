@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import defaultImage from "../../../assets/default-image.jpeg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultImage from '../../../assets/default-image.jpeg';
 
 const Product = (props) => {
   console.log(props);
@@ -10,7 +10,7 @@ const Product = (props) => {
   }
 
   return (
-    <article className="product">
+    <article className='product'>
       {image ? (
         <img src={image.url} alt={name} />
       ) : (
@@ -19,7 +19,7 @@ const Product = (props) => {
       )}
       {/* {!image && <div style={{ height: "240px", background: "#b5c7ba" }}></div>} */}
       <h4>{name}</h4>
-      {<p>${price || "contact us"}</p>}
+      {<p>${price || 'contact us'}</p>}
       {/* {!price && <p>Contact Us</p>} */}
     </article>
   );

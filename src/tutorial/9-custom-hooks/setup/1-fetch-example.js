@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { useFetch } from "./2-useFetch";
+import React from 'react';
+import { useFetch } from './2-useFetch';
 
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
-const url = "https://course-api.com/javascript-store-products";
+const url = 'https://course-api.com/javascript-store-products';
 
 const Example = () => {
   const { products, loading } = useFetch(url);
   console.log(products);
   return (
-    <div style={{ margin: "2.5rem 0" }}>
+    <div style={{ margin: '2.5rem 0' }}>
       <p>
         Custom hooks are a handy way to encapsulate hook-related logic that can
         be re-used across components. <br />
@@ -20,7 +20,7 @@ const Example = () => {
         useSyncCustomerRecordStore, then your consumer code is that much more
         readable. <br /> <b>custom hooks must start with use</b>
       </p>
-      <h3>{loading ? "loading..." : "data"}</h3>
+      <h3>{loading ? 'loading...' : 'data'}</h3>
     </div>
   );
 };

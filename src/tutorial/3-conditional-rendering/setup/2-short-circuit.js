@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 // short-circuit evaluation
 // ternary operator
 
 const ShortCircuit = () => {
-  const [text, setText] = useState("");
+  // const [text, setText] = useState("");
+  const [text] = useState('');
   const [isError, setIsError] = useState(false);
   // const firstValue = text || "hello world";
   // const secondValue = text && "hello world";
 
   return (
-    <div style={{ margin: "2.5rem 0" }}>
+    <div style={{ margin: '2.5rem 0' }}>
       <h3>2. short circuit</h3>
       <p>
         Short-circuit evaluation, minimal evaluation, or McCarthy evaluation
@@ -26,8 +27,8 @@ const ShortCircuit = () => {
       {/* <h1>{firstValue}</h1>
       <h1>value: {secondValue}</h1> */}
       {/* {if(){console.log('hello world')}} */}
-      <h1>{text || "John Doe"}</h1>
-      <button className="btn" onClick={() => setIsError(!isError)}>
+      <h1>{text || 'John Doe'}</h1>
+      <button className='btn' onClick={() => setIsError(!isError)}>
         toggle error
       </button>
       {isError && <h1>Error...</h1>}
